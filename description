@@ -1,0 +1,4 @@
+AWS Cost Optimization Project
+This project provides an automated, serverless solution to reduce AWS cloud costs by systematically shutting down tagged EC2 instances on a recurring schedule.
+
+An Amazon EventBridge rule triggers a Python-based AWS Lambda function nightly. The function scans for any running instances with a specific tag (e.g., Auto-Shutdown: True) and issues a stop command. This prevents unnecessary charges from idle development or test resources outside of working hours. Permissions are securely managed using an IAM role that adheres to the principle of least privilege.
